@@ -1,5 +1,15 @@
 # FastAPI and GraphQL API Template
 
+<!-- TOC -->
+* [FastAPI and GraphQL API Template](#fastapi-and-graphql-api-template)
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Examples](#examples)
+  * [Contributing](#contributing)
+  * [Contact](#contact)
+<!-- TOC -->
+
 ## Description
 
 This is a template project for creating an API using FastAPI and GraphQL with Python 3.10.0. Additional libraries and
@@ -55,7 +65,20 @@ Once all dependencies are installed properly, you can run the server with:
    ```
 
 Then, visit `http://localhost:8000/` in your browser to see the application in action.
-To test the GraphQL API, visit `http://localhost:8000/graphql` in your browser.
+To test the GraphQL API, visit `http://localhost:8000/graphql` in your browser and use the GraphiQL interface to test
+queries and mutations.
+
+## Examples
+
+- Insert
+  ![Insert task](images/insert_task.png "Insert task")
+- Get
+  ![Get tasks](images/get_tasks.png "Get tasks")
+  ![Get task](images/get_task.png "Get task")
+- Update
+  ![Update task](images/update_task.png "Update task")
+- Delete
+  ![Delete task](images/delete_task.png "Delete task")
 
 ## Contributing
 
