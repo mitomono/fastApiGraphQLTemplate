@@ -71,13 +71,79 @@ queries and mutations.
 ## Examples
 
 - Insert
+  ```
+  mutation AddTask($taskContent: String!) {
+    addTask(taskContent: $taskContent) {
+      id
+      content
+      isDone
+    }
+  }
+  ```
+  - variables:
+  ```
+  {
+    "taskContent": "first task"
+  }
+  ```
   ![Insert task](images/insert_task.png "Insert task")
+
 - Get
-  ![Get tasks](images/get_tasks.png "Get tasks")
+  ```
+  query MyQuery {
+    tasks {
+      isDone
+      content
+    }
+  }
+  ```
   ![Get task](images/get_task.png "Get task")
+
+  ```
+  query MyQuery {
+    tasks {
+      isDone
+      id_
+      content
+    }
+    numbers
+  }
+  ```
+  ![Get tasks](images/get_tasks.png "Get tasks")
+  
 - Update
+  ```
+  mutation UpdateTask($id_: ID!, $task: UpdateTaskInput!) {
+    updateTask(taskId: $id_, task: $task) {
+      id_
+      content
+      isDone
+    }
+  }
+  ```
+  - variables:
+  ```
+  {
+    "id_": 4,
+    "task": {
+      "content": "second tasks"
+    }
+  }
+  ```
   ![Update task](images/update_task.png "Update task")
+
 - Delete
+  ```
+  mutation DeleteTask($task_id: ID!) {
+    deleteTask(taskId: $task_id)
+  }
+  ``` 
+   - variables:
+  ```
+  {
+    "id_": 1
+  }
+  ```
   ![Delete task](images/delete_task.png "Delete task")
 
 ## Contributing
