@@ -40,6 +40,12 @@ To install and run this project, follow these steps:
    poetry install
    ```
 
+Create a `.env` file in the root directory of the project and add the following environment variables:
+
+```
+DATABASE_URL=databasename://user:password@postgresserver:port/databasename
+```
+
 ## Usage
 
 Once all dependencies are installed properly, you can run the server with:
