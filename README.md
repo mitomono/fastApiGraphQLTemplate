@@ -55,6 +55,7 @@ Once all dependencies are installed properly, you can run the server with:
    ```
 
 Then, visit `http://localhost:8000/` in your browser to see the application in action.
+To test the GraphQL API, visit `http://localhost:8000/graphql` in your browser.
 
 ## Contributing
 
