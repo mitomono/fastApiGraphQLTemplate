@@ -1,0 +1,35 @@
+# Test your FastAPI endpoints
+GRAPHQL http://localhost:8000/graphql
+Accept: application/json
+Content-Type: application/json
+
+query MyQuery {
+  tasks {
+    isDone
+    content
+    id_
+  }
+  numbers
+}
+
+###
+
+GRAPHQL http://localhost:8000/graphql
+Accept: application/json
+Content-Type: application/json
+
+query MyQuery($task_id: ID!) {
+  task(taskId: $task_id) {
+    id_
+    isDone
+    number
+    content
+  }
+  numbers
+}
+
+{
+  "task_id": "1"
+}
+
+###

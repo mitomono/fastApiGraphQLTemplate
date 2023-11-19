@@ -1,0 +1,36 @@
+target-version = "py310"
+line-length = 120
+exclude = [
+    "tests/*",
+    "venv/*",
+    "env/*",
+]
+select = [
+    "A",
+    "B",
+    "C9",
+    "E",
+    "F",
+    "ISC",
+    "UP",
+    "RUF",
+    "W",
+]
+ignore = []
+
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fix = true
+fixable = ["ALL"]
+unfixable = []
+
+[flake8-bugbear]
+# Allow default arguments like, e.g., `data: List[str] = fastapi.Query(None)`.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query"]
+
+[pep8-naming]
+# Allow Pydantic's `@validator` decorator to trigger class method treatment.
+classmethod-decorators = ["pydantic.validator"]
+
+[mccabe]
+max-complexity = 10
